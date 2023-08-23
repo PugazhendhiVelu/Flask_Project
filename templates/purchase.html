@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purchase Item</title>
+<link rel="stylesheet" href="/static/purchasestyle.css">
+</head>
+<body>
+<div class="container">
+  <h1>Purchase Item</h1>
+  <form action = "/home" method="post">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" required>
+    
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
+    
+    <label for="rate">Rate:</label>
+    <input type="number" id="rate" name="rate" step="0.01" required>
+    
+    <label for="sellingPrice">Selling Price:</label>
+    <input type="number" id="sellingPrice" name="sellingPrice" step="0.01" required>
+    
+    <button type="submit">Submit</button>
+    <a href="home.html" class="back-button">Back</a>
+  </form>
+</div>
+</body>
+</html>

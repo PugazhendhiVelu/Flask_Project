@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avaiable Items</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <h2>{{com[0]['cname']}}</h2>
+        <h3 class ="tb"><label>Total Balance : </label></h3>
+        <h2>{{com[0]['cashbal']}}</h2>
+    </nav>
+    <h1>Avaiable Stocks</h1>
+    <table>
+        <tr>
+            <th>Item Number</th>
+            <th>Item Name</th>
+            <th>Remaining Quantity</th>
+            <th>Cost Price</th>
+            <th>Selling Price</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user['ino'] }}</td>
+            <td>{{ user['iname'] }}</td>
+            <td>{{ user['rqty'] }}</td>
+            <td>{{ user['rate'] }}</td>
+            <td>{{ user['sp'] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="purchase.html" class="purchase-button">Purchase</a>
+    <a href="sales.html" class="sell-button">Sell</a>
+</body>
+</html>
