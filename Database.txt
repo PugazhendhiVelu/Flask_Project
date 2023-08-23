@@ -1,0 +1,26 @@
+MYSQL
+Database Name:Shop
+
+use shop
+
+//Company Table
+
+create tablle company(cid int not null primary key,cname varchar(20) not null,cashbal int not null);
+
+//Items Table
+
+create table items(ino int not null auto_increment primary key,iname varchar(20) not null);
+
+
+//Available Stocks
+
+create table astocks(ino int not null,rqty int not null,rate int not null,sp int not null,foreign key(ino) references items(ino));
+
+//Purchase Table
+
+create table purchase(iname varchar(20) not null,rqty int not null,rate int not null,sp int not null, foreign key(rqty,rate,sp) references astocks(rqty,rate,sp));
+
+//Sales Table
+
+create table sales(iname varchar(20) not null,qty int not null);
+
